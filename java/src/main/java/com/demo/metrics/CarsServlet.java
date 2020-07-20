@@ -14,7 +14,7 @@ public class CarsServlet extends HttpServlet {
             throws ServletException, IOException {
 
         Metrics.numCars.inc();
-        Metrics.carSpeed.inc(Math.random() * 100);
+        Metrics.carSpeed.set(Math.random() * 100);
 
         response.setContentType("application/json");
         response.setStatus(HttpServletResponse.SC_OK);

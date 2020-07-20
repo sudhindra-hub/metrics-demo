@@ -1,0 +1,54 @@
+{
+    "widgets": [
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 1,
+            "width": 24,
+            "height": 7,
+            "properties": {
+                "view": "timeSeries",
+                "stacked": true,
+                "region": "us-west-2",
+                "start": "-PT1H",
+                "end": "P0D",
+                "stat": "Sum",
+                "period": 300,
+                "metrics": [
+                    [ "ContainerInsights/Prometheus", "num_cars", "ClusterName", "monitoring", "Namespace", "metrics-demo" ]
+                ],
+                "title": "Number of Cars"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 1,
+            "width": 24,
+            "height": 7,
+            "properties": {
+                "view": "timeSeries",
+                "stacked": true,
+                "region": "us-west-2",
+                "start": "-PT1H",
+                "end": "P0D",
+                "stat": "Average",
+                "period": 300,
+                "metrics": [
+                    [ "ContainerInsights/Prometheus", "speed_cars", "ClusterName", "monitoring", "Namespace", "metrics-demo" ]
+                ],
+                "title": "Average Car Speed"
+            }
+        },
+        {
+            "type": "text",
+            "x": 0,
+            "y": 0,
+            "width": 24,
+            "height": 1,
+            "properties": {
+                "markdown": "\n# Prometheus Metrics from metrics demo app\n"
+            }
+        }
+    ]
+}
