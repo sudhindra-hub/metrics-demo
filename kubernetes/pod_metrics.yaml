@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: metrics-pod
+  namespace: metrics-demo
+  labels:
+    app: Metrics
+spec:
+  containers:
+    - image: prometheus/metrics-demo:latest
+      name: metrics-container
+      imagePullPolicy: Never
+      ports:
+        - containerPort: 8082
